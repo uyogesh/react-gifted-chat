@@ -178,9 +178,7 @@ var Color = {
   timeTextColor: '#aaa'
 };
 
-var Actions =
-/*#__PURE__*/
-function (_React$Component) {
+var Actions = /*#__PURE__*/function (_React$Component) {
   _inherits(Actions, _React$Component);
 
   function Actions(props) {
@@ -220,16 +218,16 @@ function (_React$Component) {
         return this.props.icon();
       }
 
-      return React__default.createElement(ReactNative.View, {
+      return /*#__PURE__*/React__default.createElement(ReactNative.View, {
         style: [styles.wrapper, this.props.wrapperStyle]
-      }, React__default.createElement(ReactNative.Text, {
+      }, /*#__PURE__*/React__default.createElement(ReactNative.Text, {
         style: [styles.iconText, this.props.iconTextStyle]
       }, "+"));
     }
   }, {
     key: "render",
     value: function render() {
-      return React__default.createElement(ReactNative.TouchableOpacity, {
+      return /*#__PURE__*/React__default.createElement(ReactNative.TouchableOpacity, {
         style: [styles.container, this.props.containerStyle],
         onPress: this.props.onPressActionButton || this.onActionsPress
       }, this.renderIcon());
@@ -306,9 +304,7 @@ function _objectWithoutProperties(source, excluded) {
   return target;
 }
 
-var TouchableOpacity =
-/*#__PURE__*/
-function (_Component) {
+var TouchableOpacity = /*#__PURE__*/function (_Component) {
   _inherits(TouchableOpacity, _Component);
 
   function TouchableOpacity() {
@@ -364,7 +360,7 @@ function (_Component) {
         style = _objectSpread({}, styles$1.container, pressed ? styles$1.containerPressed : styles$1.containerNotPressed, style);
       }
 
-      return React__default.createElement("div", {
+      return /*#__PURE__*/React__default.createElement("div", {
         style: style,
         onClick: onPress,
         onTouchStart: this.handleButtonPress,
@@ -404,9 +400,7 @@ var carrot = Color.carrot,
     turquoise = Color.turquoise,
     midnightBlue = Color.midnightBlue;
 
-var GiftedAvatar =
-/*#__PURE__*/
-function (_React$Component) {
+var GiftedAvatar = /*#__PURE__*/function (_React$Component) {
   _inherits(GiftedAvatar, _React$Component);
 
   function GiftedAvatar() {
@@ -448,7 +442,7 @@ function (_React$Component) {
       }
 
       if (typeof this.props.user.avatar === 'string') {
-        return React__default.createElement(ReactNative.Image, {
+        return /*#__PURE__*/React__default.createElement(ReactNative.Image, {
           source: {
             uri: this.props.user.avatar
           },
@@ -457,7 +451,7 @@ function (_React$Component) {
       }
 
       if (typeof this.props.user.avatar === 'number') {
-        return React__default.createElement(ReactNative.Image, {
+        return /*#__PURE__*/React__default.createElement(ReactNative.Image, {
           source: this.props.user.avatar,
           style: [styles$2.avatarStyle, this.props.avatarStyle]
         });
@@ -468,7 +462,7 @@ function (_React$Component) {
   }, {
     key: "renderInitials",
     value: function renderInitials() {
-      return React__default.createElement(ReactNative.Text, {
+      return /*#__PURE__*/React__default.createElement(ReactNative.Text, {
         style: [styles$2.textStyle, this.props.textStyle]
       }, this.avatarName);
     }
@@ -479,14 +473,14 @@ function (_React$Component) {
 
       if (!this.props.user.name && !this.props.user.avatar) {
         // render placeholder
-        return React__default.createElement(ReactNative.View, {
+        return /*#__PURE__*/React__default.createElement(ReactNative.View, {
           style: [styles$2.avatarStyle, styles$2.avatarTransparent, this.props.avatarStyle],
           accessibilityTraits: "image"
         });
       }
 
       if (this.props.user.avatar) {
-        return React__default.createElement(TouchableOpacity, {
+        return /*#__PURE__*/React__default.createElement(TouchableOpacity, {
           disabled: !this.props.onPress,
           onPress: function onPress() {
             var _this$props = _this.props,
@@ -502,7 +496,7 @@ function (_React$Component) {
       }
 
       this.setAvatarColor();
-      return React__default.createElement(TouchableOpacity, {
+      return /*#__PURE__*/React__default.createElement(TouchableOpacity, {
         disabled: !this.props.onPress,
         onPress: function onPress() {
           var _this$props2 = _this.props,
@@ -583,9 +577,7 @@ var styles$3 = {
   })
 };
 
-var Avatar =
-/*#__PURE__*/
-function (_React$Component) {
+var Avatar = /*#__PURE__*/function (_React$Component) {
   _inherits(Avatar, _React$Component);
 
   function Avatar() {
@@ -607,7 +599,7 @@ function (_React$Component) {
         return this.props.renderAvatar(avatarProps);
       }
 
-      return React__default.createElement(GiftedAvatar, {
+      return /*#__PURE__*/React__default.createElement(GiftedAvatar, {
         avatarStyle: ReactNative.StyleSheet.flatten([styles$3[this.props.position].image, this.props.imageStyle[this.props.position]]),
         user: this.props.currentMessage.user,
         onPress: function onPress() {
@@ -632,14 +624,14 @@ function (_React$Component) {
       }
 
       if (!showAvatarForEveryMessage && isSameUser(this.props.currentMessage, messageToCompare) && isSameDay(this.props.currentMessage, messageToCompare)) {
-        return React__default.createElement(ReactNative.View, {
+        return /*#__PURE__*/React__default.createElement(ReactNative.View, {
           style: [styles$3[this.props.position].container, this.props.containerStyle[this.props.position]]
-        }, React__default.createElement(GiftedAvatar, {
+        }, /*#__PURE__*/React__default.createElement(GiftedAvatar, {
           avatarStyle: ReactNative.StyleSheet.flatten([styles$3[this.props.position].image, this.props.imageStyle[this.props.position]])
         }));
       }
 
-      return React__default.createElement(ReactNative.View, {
+      return /*#__PURE__*/React__default.createElement(ReactNative.View, {
         style: [styles$3[this.props.position].container, styles$3[this.props.position][computedStyle], this.props.containerStyle[this.props.position]]
       }, this.renderAvatar());
     }
@@ -683,9 +675,7 @@ function _toConsumableArray(arr) {
   return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread();
 }
 
-var TextExtraction =
-/*#__PURE__*/
-function () {
+var TextExtraction = /*#__PURE__*/function () {
   /**
    * @param {String} text - Text to be parsed
    * @param {Object[]} patterns - Patterns to be used when parsed
@@ -802,9 +792,7 @@ var PATTERNS = {
   email: /\S+@\S+\.\S+/
 };
 
-var ParsedText =
-/*#__PURE__*/
-function (_React$Component) {
+var ParsedText = /*#__PURE__*/function (_React$Component) {
   _inherits(ParsedText, _React$Component);
 
   function ParsedText() {
@@ -854,7 +842,7 @@ function (_React$Component) {
 
       delete props.childrenProps;
       return textExtraction.parse().map(function (props, index) {
-        return React__default.createElement(ReactNative__default.Text, Object.assign({
+        return /*#__PURE__*/React__default.createElement(ReactNative__default.Text, Object.assign({
           key: "parsedText-".concat(index)
         }, childrenProps, props));
       });
@@ -867,7 +855,7 @@ function (_React$Component) {
       var props = _objectSpread({}, this.props);
 
       delete props.childrenProps;
-      return React__default.createElement(ReactNative__default.Text, Object.assign({
+      return /*#__PURE__*/React__default.createElement(ReactNative__default.Text, Object.assign({
         ref: function ref(_ref) {
           return _this._root = _ref;
         }
@@ -885,9 +873,7 @@ ParsedText.defaultProps = {
 
 var WWW_URL_PATTERN = /^www\./i;
 
-var MessageText =
-/*#__PURE__*/
-function (_React$Component) {
+var MessageText = /*#__PURE__*/function (_React$Component) {
   _inherits(MessageText, _React$Component);
 
   function MessageText(props) {
@@ -951,11 +937,11 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       var linkStyle = ReactNative.StyleSheet.flatten([styles$4[this.props.position].link, this.props.linkStyle[this.props.position]]);
-      return React__default.createElement(ReactNative.View, {
+      return /*#__PURE__*/React__default.createElement(ReactNative.View, {
         style: [styles$4[this.props.position].container, this.props.containerStyle[this.props.position]]
-      }, React__default.createElement(ParsedText, {
+      }, /*#__PURE__*/React__default.createElement(ParsedText, {
         style: [styles$4[this.props.position].text, this.props.textStyle[this.props.position], this.props.customTextStyle],
-        parse: _toConsumableArray(this.props.parsePatterns(linkStyle)).concat([{
+        parse: [].concat(_toConsumableArray(this.props.parsePatterns(linkStyle)), [{
           type: 'url',
           style: linkStyle,
           onPress: this.onUrlPress
@@ -1053,9 +1039,7 @@ function styleInject(css, ref) {
 var css = "@keyframes closeWindow {\n  0% {\n    opacity: 1;\n  }\n  100% {\n    opacity: 0;\n  }\n}\n\n.ril__outer {\n  background-color: rgba(0, 0, 0, 0.85);\n  outline: none;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  z-index: 1000;\n  width: 100%;\n  height: 100%;\n  -ms-content-zooming: none;\n  -ms-user-select: none;\n  -ms-touch-select: none;\n  touch-action: none;\n}\n\n.ril__outerClosing {\n  opacity: 0;\n}\n\n.ril__inner {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n}\n\n.ril__image,\n.ril__imagePrev,\n.ril__imageNext {\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  margin: auto;\n  max-width: none;\n  -ms-content-zooming: none;\n  -ms-user-select: none;\n  -ms-touch-select: none;\n  touch-action: none;\n}\n\n.ril__imageDiscourager {\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: contain;\n}\n\n.ril__navButtons {\n  border: none;\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  width: 20px;\n  height: 34px;\n  padding: 40px 30px;\n  margin: auto;\n  cursor: pointer;\n  opacity: 0.7;\n}\n.ril__navButtons:hover {\n  opacity: 1;\n}\n.ril__navButtons:active {\n  opacity: 0.7;\n}\n\n.ril__navButtonPrev {\n  left: 0;\n  background: rgba(0, 0, 0, 0.2)\n    url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgd2lkdGg9IjIwIiBoZWlnaHQ9IjM0Ij48cGF0aCBkPSJtIDE5LDMgLTIsLTIgLTE2LDE2IDE2LDE2IDEsLTEgLTE1LC0xNSAxNSwtMTUgeiIgZmlsbD0iI0ZGRiIvPjwvc3ZnPg==')\n    no-repeat center;\n}\n\n.ril__navButtonNext {\n  right: 0;\n  background: rgba(0, 0, 0, 0.2)\n    url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgd2lkdGg9IjIwIiBoZWlnaHQ9IjM0Ij48cGF0aCBkPSJtIDEsMyAyLC0yIDE2LDE2IC0xNiwxNiAtMSwtMSAxNSwtMTUgLTE1LC0xNSB6IiBmaWxsPSIjRkZGIi8+PC9zdmc+')\n    no-repeat center;\n}\n\n.ril__downloadBlocker {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7');\n  background-size: cover;\n}\n\n.ril__caption,\n.ril__toolbar {\n  background-color: rgba(0, 0, 0, 0.5);\n  position: absolute;\n  left: 0;\n  right: 0;\n  display: flex;\n  justify-content: space-between;\n}\n\n.ril__caption {\n  bottom: 0;\n  max-height: 150px;\n  overflow: auto;\n}\n\n.ril__captionContent {\n  padding: 10px 20px;\n  color: #fff;\n}\n\n.ril__toolbar {\n  top: 0;\n  height: 50px;\n}\n\n.ril__toolbarSide {\n  height: 50px;\n  margin: 0;\n}\n\n.ril__toolbarLeftSide {\n  padding-left: 20px;\n  padding-right: 0;\n  flex: 0 1 auto;\n  overflow: hidden;\n  text-overflow: ellipsis;\n}\n\n.ril__toolbarRightSide {\n  padding-left: 0;\n  padding-right: 20px;\n  flex: 0 0 auto;\n}\n\n.ril__toolbarItem {\n  display: inline-block;\n  line-height: 50px;\n  padding: 0;\n  color: #fff;\n  font-size: 120%;\n  max-width: 100%;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n}\n\n.ril__toolbarItemChild {\n  vertical-align: middle;\n}\n\n.ril__builtinButton {\n  width: 40px;\n  height: 35px;\n  cursor: pointer;\n  border: none;\n  opacity: 0.7;\n}\n.ril__builtinButton:hover {\n  opacity: 1;\n}\n.ril__builtinButton:active {\n  outline: none;\n}\n\n.ril__builtinButtonDisabled {\n  cursor: default;\n  opacity: 0.5;\n}\n.ril__builtinButtonDisabled:hover {\n  opacity: 0.5;\n}\n\n.ril__closeButton {\n  background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIj48cGF0aCBkPSJtIDEsMyAxLjI1LC0xLjI1IDcuNSw3LjUgNy41LC03LjUgMS4yNSwxLjI1IC03LjUsNy41IDcuNSw3LjUgLTEuMjUsMS4yNSAtNy41LC03LjUgLTcuNSw3LjUgLTEuMjUsLTEuMjUgNy41LC03LjUgLTcuNSwtNy41IHoiIGZpbGw9IiNGRkYiLz48L3N2Zz4=')\n    no-repeat center;\n}\n\n.ril__zoomInButton {\n  background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+PGcgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+PHBhdGggZD0iTTEgMTlsNi02Ii8+PHBhdGggZD0iTTkgOGg2Ii8+PHBhdGggZD0iTTEyIDV2NiIvPjwvZz48Y2lyY2xlIGN4PSIxMiIgY3k9IjgiIHI9IjciIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLXdpZHRoPSIyIi8+PC9zdmc+')\n    no-repeat center;\n}\n\n.ril__zoomOutButton {\n  background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCI+PGcgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+PHBhdGggZD0iTTEgMTlsNi02Ii8+PHBhdGggZD0iTTkgOGg2Ii8+PC9nPjxjaXJjbGUgY3g9IjEyIiBjeT0iOCIgcj0iNyIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjIiLz48L3N2Zz4=')\n    no-repeat center;\n}\n\n.ril__outerAnimating {\n  animation-name: closeWindow;\n}\n\n@keyframes pointFade {\n  0%,\n  19.999%,\n  100% {\n    opacity: 0;\n  }\n  20% {\n    opacity: 1;\n  }\n}\n\n.ril__loadingCircle {\n  width: 60px;\n  height: 60px;\n  position: relative;\n}\n\n.ril__loadingCirclePoint {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  left: 0;\n  top: 0;\n}\n.ril__loadingCirclePoint::before {\n  content: '';\n  display: block;\n  margin: 0 auto;\n  width: 11%;\n  height: 30%;\n  background-color: #fff;\n  border-radius: 30%;\n  animation: pointFade 800ms infinite ease-in-out both;\n}\n.ril__loadingCirclePoint:nth-of-type(1) {\n  transform: rotate(0deg);\n}\n.ril__loadingCirclePoint:nth-of-type(7) {\n  transform: rotate(180deg);\n}\n.ril__loadingCirclePoint:nth-of-type(1)::before,\n.ril__loadingCirclePoint:nth-of-type(7)::before {\n  animation-delay: -800ms;\n}\n.ril__loadingCirclePoint:nth-of-type(2) {\n  transform: rotate(30deg);\n}\n.ril__loadingCirclePoint:nth-of-type(8) {\n  transform: rotate(210deg);\n}\n.ril__loadingCirclePoint:nth-of-type(2)::before,\n.ril__loadingCirclePoint:nth-of-type(8)::before {\n  animation-delay: -666ms;\n}\n.ril__loadingCirclePoint:nth-of-type(3) {\n  transform: rotate(60deg);\n}\n.ril__loadingCirclePoint:nth-of-type(9) {\n  transform: rotate(240deg);\n}\n.ril__loadingCirclePoint:nth-of-type(3)::before,\n.ril__loadingCirclePoint:nth-of-type(9)::before {\n  animation-delay: -533ms;\n}\n.ril__loadingCirclePoint:nth-of-type(4) {\n  transform: rotate(90deg);\n}\n.ril__loadingCirclePoint:nth-of-type(10) {\n  transform: rotate(270deg);\n}\n.ril__loadingCirclePoint:nth-of-type(4)::before,\n.ril__loadingCirclePoint:nth-of-type(10)::before {\n  animation-delay: -400ms;\n}\n.ril__loadingCirclePoint:nth-of-type(5) {\n  transform: rotate(120deg);\n}\n.ril__loadingCirclePoint:nth-of-type(11) {\n  transform: rotate(300deg);\n}\n.ril__loadingCirclePoint:nth-of-type(5)::before,\n.ril__loadingCirclePoint:nth-of-type(11)::before {\n  animation-delay: -266ms;\n}\n.ril__loadingCirclePoint:nth-of-type(6) {\n  transform: rotate(150deg);\n}\n.ril__loadingCirclePoint:nth-of-type(12) {\n  transform: rotate(330deg);\n}\n.ril__loadingCirclePoint:nth-of-type(6)::before,\n.ril__loadingCirclePoint:nth-of-type(12)::before {\n  animation-delay: -133ms;\n}\n.ril__loadingCirclePoint:nth-of-type(7) {\n  transform: rotate(180deg);\n}\n.ril__loadingCirclePoint:nth-of-type(13) {\n  transform: rotate(360deg);\n}\n.ril__loadingCirclePoint:nth-of-type(7)::before,\n.ril__loadingCirclePoint:nth-of-type(13)::before {\n  animation-delay: 0ms;\n}\n\n.ril__loadingContainer {\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n}\n.ril__imagePrev .ril__loadingContainer,\n.ril__imageNext .ril__loadingContainer {\n  display: none;\n}\n\n.ril__errorContainer {\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  color: #fff;\n}\n.ril__imagePrev .ril__errorContainer,\n.ril__imageNext .ril__errorContainer {\n  display: none;\n}\n\n.ril__loadingContainer__icon {\n  color: #fff;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translateX(-50%) translateY(-50%);\n}\n";
 styleInject(css);
 
-var MessageImage =
-/*#__PURE__*/
-function (_React$Component) {
+var MessageImage = /*#__PURE__*/function (_React$Component) {
   _inherits(MessageImage, _React$Component);
 
   function MessageImage() {
@@ -1103,15 +1087,15 @@ function (_React$Component) {
         console.log('messageIndex', messageIndex);
       }
 
-      return React__default.createElement(TouchableOpacity, {
+      return /*#__PURE__*/React__default.createElement(TouchableOpacity, {
         onPress: this.onClickImage,
         style: _objectSpread({}, styles$5.container, containerStyle)
-      }, React__default.createElement(ReactNative.Image, Object.assign({}, imageProps, {
+      }, /*#__PURE__*/React__default.createElement(ReactNative.Image, Object.assign({}, imageProps, {
         style: [styles$5.image, this.props.imageStyle],
         source: {
           uri: currentMessage.image
         }
-      })), isOpen && React__default.createElement(Lightbox, {
+      })), isOpen && /*#__PURE__*/React__default.createElement(Lightbox, {
         onCloseRequest: function onCloseRequest() {
           return _this2.setState({
             isOpen: false
@@ -1182,7 +1166,9 @@ function MessageVideo(_ref) {
       videoProps = _ref.videoProps,
       videoStyle = _ref.videoStyle,
       currentMessage = _ref.currentMessage;
-  return (// eslint-disable-next-line no-use-before-define
+  return (
+    /*#__PURE__*/
+    // eslint-disable-next-line no-use-before-define
     React__default.createElement(ReactNative.View, {
       style: [styles$6.container, containerStyle]
     })
@@ -1217,9 +1203,9 @@ function Time(_ref, context) {
       timeFormat = _ref.timeFormat,
       textStyle = _ref.textStyle,
       timeTextStyle = _ref.timeTextStyle;
-  return React__default.createElement(ReactNative.View, {
+  return /*#__PURE__*/React__default.createElement(ReactNative.View, {
     style: [styles$7[position].container, containerStyle[position]]
-  }, React__default.createElement(ReactNative.Text, {
+  }, /*#__PURE__*/React__default.createElement(ReactNative.Text, {
     style: [styles$7[position].text, textStyle[position], timeTextStyle[position]]
   }, moment(currentMessage.createdAt).locale(context.getLocale()).format(timeFormat)));
 }
@@ -1261,9 +1247,7 @@ Time.defaultProps = {
   timeTextStyle: {}
 };
 
-var Bubble =
-/*#__PURE__*/
-function (_React$Component) {
+var Bubble = /*#__PURE__*/function (_React$Component) {
   _inherits(Bubble, _React$Component);
 
   function Bubble() {
@@ -1336,7 +1320,7 @@ function (_React$Component) {
           return this.props.renderMessageText(messageTextProps);
         }
 
-        return React__default.createElement(MessageText, messageTextProps);
+        return /*#__PURE__*/React__default.createElement(MessageText, messageTextProps);
       }
 
       return null;
@@ -1354,7 +1338,7 @@ function (_React$Component) {
           return this.props.renderMessageImage(messageImageProps);
         }
 
-        return React__default.createElement(MessageImage, messageImageProps);
+        return /*#__PURE__*/React__default.createElement(MessageImage, messageImageProps);
       }
 
       return null;
@@ -1372,7 +1356,7 @@ function (_React$Component) {
           return this.props.renderMessageVideo(messageVideoProps);
         }
 
-        return React__default.createElement(MessageVideo, messageVideoProps);
+        return /*#__PURE__*/React__default.createElement(MessageVideo, messageVideoProps);
       }
 
       return null;
@@ -1391,13 +1375,13 @@ function (_React$Component) {
       }
 
       if (currentMessage.sent || currentMessage.received || currentMessage.pending) {
-        return React__default.createElement(ReactNative.View, {
+        return /*#__PURE__*/React__default.createElement(ReactNative.View, {
           style: styles$8.tickView
-        }, currentMessage.sent && React__default.createElement(ReactNative.Text, {
+        }, currentMessage.sent && /*#__PURE__*/React__default.createElement(ReactNative.Text, {
           style: [styles$8.tick, this.props.tickStyle]
-        }, "\u2713"), currentMessage.received && React__default.createElement(ReactNative.Text, {
+        }, "\u2713"), currentMessage.received && /*#__PURE__*/React__default.createElement(ReactNative.Text, {
           style: [styles$8.tick, this.props.tickStyle]
-        }, "\u2713"), currentMessage.pending && React__default.createElement(ReactNative.Text, {
+        }, "\u2713"), currentMessage.pending && /*#__PURE__*/React__default.createElement(ReactNative.Text, {
           style: [styles$8.tick, this.props.tickStyle]
         }, "\uD83D\uDD53"));
       }
@@ -1417,7 +1401,7 @@ function (_React$Component) {
           return this.props.renderTime(timeProps);
         }
 
-        return React__default.createElement(Time, timeProps);
+        return /*#__PURE__*/React__default.createElement(Time, timeProps);
       }
 
       return null;
@@ -1432,9 +1416,9 @@ function (_React$Component) {
           return null;
         }
 
-        return React__default.createElement(ReactNative.View, {
+        return /*#__PURE__*/React__default.createElement(ReactNative.View, {
           style: styles$8.usernameView
-        }, React__default.createElement(ReactNative.Text, {
+        }, /*#__PURE__*/React__default.createElement(ReactNative.Text, {
           style: [styles$8.username, this.props.usernameStyle]
         }, "~ ", currentMessage.user.name));
       }
@@ -1453,15 +1437,15 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return React__default.createElement(ReactNative.View, {
+      return /*#__PURE__*/React__default.createElement(ReactNative.View, {
         style: [styles$8[this.props.position].container, this.props.containerStyle[this.props.position]]
-      }, React__default.createElement(ReactNative.View, {
+      }, /*#__PURE__*/React__default.createElement(ReactNative.View, {
         style: [styles$8[this.props.position].wrapper, this.props.wrapperStyle[this.props.position], this.handleBubbleToNext(), this.handleBubbleToPrevious()]
-      }, React__default.createElement(TouchableOpacity, Object.assign({
+      }, /*#__PURE__*/React__default.createElement(TouchableOpacity, Object.assign({
         withoutFeedback: true,
         onLongPress: this.onLongPress,
         accessibilityTraits: "text"
-      }, this.props.touchableProps), React__default.createElement(ReactNative.View, null, this.renderCustomView(), this.renderMessageImage(), this.renderMessageVideo(), this.renderMessageText(), React__default.createElement(ReactNative.View, {
+      }, this.props.touchableProps), /*#__PURE__*/React__default.createElement(ReactNative.View, null, this.renderCustomView(), this.renderMessageImage(), this.renderMessageVideo(), this.renderMessageText(), /*#__PURE__*/React__default.createElement(ReactNative.View, {
         style: [styles$8[this.props.position].bottom, this.props.bottomContainerStyle[this.props.position]]
       }, this.renderUsername(), this.renderTime(), this.renderTicks())))));
     }
@@ -1573,11 +1557,11 @@ function SystemMessage(_ref) {
       containerStyle = _ref.containerStyle,
       wrapperStyle = _ref.wrapperStyle,
       textStyle = _ref.textStyle;
-  return React__default.createElement(ReactNative.View, {
+  return /*#__PURE__*/React__default.createElement(ReactNative.View, {
     style: [styles$9.container, containerStyle]
-  }, React__default.createElement(ReactNative.View, {
+  }, /*#__PURE__*/React__default.createElement(ReactNative.View, {
     style: [styles$9.wrapper, wrapperStyle]
-  }, React__default.createElement(ReactNative.Text, {
+  }, /*#__PURE__*/React__default.createElement(ReactNative.Text, {
     style: [styles$9.text, textStyle]
   }, currentMessage.text)));
 }
@@ -1605,9 +1589,7 @@ SystemMessage.defaultProps = {
   textStyle: {}
 };
 
-var Composer =
-/*#__PURE__*/
-function (_React$Component) {
+var Composer = /*#__PURE__*/function (_React$Component) {
   _inherits(Composer, _React$Component);
 
   function Composer() {
@@ -1638,7 +1620,7 @@ function (_React$Component) {
     value: function render() {
       var _this = this;
 
-      return React__default.createElement(ReactNative.TextInput, Object.assign({
+      return /*#__PURE__*/React__default.createElement(ReactNative.TextInput, Object.assign({
         testID: this.props.placeholder,
         accessible: true,
         accessibilityLabel: this.props.placeholder,
@@ -1705,11 +1687,11 @@ function Day(_ref, context) {
       inverted = _ref.inverted;
 
   if (!isSameDay(currentMessage, inverted ? previousMessage : nextMessage)) {
-    return React__default.createElement(ReactNative.View, {
+    return /*#__PURE__*/React__default.createElement(ReactNative.View, {
       style: [styles$b.container, containerStyle]
-    }, React__default.createElement(ReactNative.View, {
+    }, /*#__PURE__*/React__default.createElement(ReactNative.View, {
       style: wrapperStyle
-    }, React__default.createElement(ReactNative.Text, {
+    }, /*#__PURE__*/React__default.createElement(ReactNative.Text, {
       style: [styles$b.text, textStyle]
     }, moment(currentMessage.createdAt).locale(context.getLocale()).format(dateFormat).toUpperCase())));
   }
@@ -1756,7 +1738,7 @@ function Send(_ref) {
       alwaysShowSend = _ref.alwaysShowSend;
 
   if (alwaysShowSend || text.trim().length > 0) {
-    return React__default.createElement(TouchableOpacity, {
+    return /*#__PURE__*/React__default.createElement(TouchableOpacity, {
       testID: "send",
       accessible: true,
       accessibilityLabel: "send",
@@ -1767,12 +1749,12 @@ function Send(_ref) {
         }, true);
       },
       accessibilityTraits: "button"
-    }, React__default.createElement(ReactNative.View, null, children || React__default.createElement(ReactNative.Text, {
+    }, /*#__PURE__*/React__default.createElement(ReactNative.View, null, children || /*#__PURE__*/React__default.createElement(ReactNative.Text, {
       style: [styles$c.text, textStyle]
     }, label)));
   }
 
-  return React__default.createElement(ReactNative.View, null);
+  return /*#__PURE__*/React__default.createElement(ReactNative.View, null);
 }
 var styles$c = ReactNative.StyleSheet.create({
   container: {
@@ -1799,9 +1781,7 @@ Send.defaultProps = {
   alwaysShowSend: false
 };
 
-var InputToolbar =
-/*#__PURE__*/
-function (_React$Component) {
+var InputToolbar = /*#__PURE__*/function (_React$Component) {
   _inherits(InputToolbar, _React$Component);
 
   function InputToolbar(props) {
@@ -1856,7 +1836,7 @@ function (_React$Component) {
       }
 
       if (this.props.onPressActionButton) {
-        return React__default.createElement(Actions, this.props);
+        return /*#__PURE__*/React__default.createElement(Actions, this.props);
       }
 
       return null;
@@ -1868,7 +1848,7 @@ function (_React$Component) {
         return this.props.renderSend(this.props);
       }
 
-      return React__default.createElement(Send, this.props);
+      return /*#__PURE__*/React__default.createElement(Send, this.props);
     }
   }, {
     key: "renderComposer",
@@ -1877,13 +1857,13 @@ function (_React$Component) {
         return this.props.renderComposer(this.props);
       }
 
-      return React__default.createElement(Composer, this.props);
+      return /*#__PURE__*/React__default.createElement(Composer, this.props);
     }
   }, {
     key: "renderAccessory",
     value: function renderAccessory() {
       if (this.props.renderAccessory) {
-        return React__default.createElement(ReactNative.View, {
+        return /*#__PURE__*/React__default.createElement(ReactNative.View, {
           style: [styles$d.accessory, this.props.accessoryStyle]
         }, this.props.renderAccessory(this.props));
       }
@@ -1893,12 +1873,12 @@ function (_React$Component) {
   }, {
     key: "render",
     value: function render() {
-      return React__default.createElement(ReactNative.View, {
+      return /*#__PURE__*/React__default.createElement(ReactNative.View, {
         style: [styles$d.container, this.props.containerStyle, {
           position: this.state.position,
           height: this.props.composerHeight
         }]
-      }, React__default.createElement(ReactNative.View, {
+      }, /*#__PURE__*/React__default.createElement(ReactNative.View, {
         style: [styles$d.primary, this.props.primaryStyle]
       }, this.renderActions(), this.renderComposer(), this.renderSend()), this.renderAccessory());
     }
@@ -1934,9 +1914,7 @@ InputToolbar.defaultProps = {
   onPressActionButton: function onPressActionButton() {}
 };
 
-var LoadEarlier =
-/*#__PURE__*/
-function (_React$Component) {
+var LoadEarlier = /*#__PURE__*/function (_React$Component) {
   _inherits(LoadEarlier, _React$Component);
 
   function LoadEarlier() {
@@ -1949,16 +1927,16 @@ function (_React$Component) {
     key: "renderLoading",
     value: function renderLoading() {
       if (this.props.isLoadingEarlier === false) {
-        return React__default.createElement(ReactNative.Text, {
+        return /*#__PURE__*/React__default.createElement(ReactNative.Text, {
           style: [styles$e.text, this.props.textStyle]
         }, this.props.label);
       }
 
-      return React__default.createElement(ReactNative.View, null, React__default.createElement(ReactNative.Text, {
+      return /*#__PURE__*/React__default.createElement(ReactNative.View, null, /*#__PURE__*/React__default.createElement(ReactNative.Text, {
         style: [styles$e.text, this.props.textStyle, {
           opacity: 0
         }]
-      }, this.props.label), React__default.createElement(ReactNative.ActivityIndicator, {
+      }, this.props.label), /*#__PURE__*/React__default.createElement(ReactNative.ActivityIndicator, {
         color: "white",
         size: "small",
         style: [styles$e.activityIndicator, this.props.activityIndicatorStyle]
@@ -1969,7 +1947,7 @@ function (_React$Component) {
     value: function render() {
       var _this = this;
 
-      return React__default.createElement(ReactNative.TouchableOpacity, {
+      return /*#__PURE__*/React__default.createElement(ReactNative.TouchableOpacity, {
         style: [styles$e.container, this.props.containerStyle],
         onPress: function onPress() {
           if (_this.props.onLoadEarlier) {
@@ -1978,7 +1956,7 @@ function (_React$Component) {
         },
         disabled: this.props.isLoadingEarlier === true,
         accessibilityTraits: "button"
-      }, React__default.createElement(ReactNative.View, {
+      }, /*#__PURE__*/React__default.createElement(ReactNative.View, {
         style: [styles$e.wrapper, this.props.wrapperStyle]
       }, this.renderLoading()));
     }
@@ -2041,9 +2019,7 @@ var styles$f = {
   })
 };
 
-var Message =
-/*#__PURE__*/
-function (_React$Component) {
+var Message = /*#__PURE__*/function (_React$Component) {
   _inherits(Message, _React$Component);
 
   function Message() {
@@ -2090,7 +2066,7 @@ function (_React$Component) {
           return this.props.renderDay(dayProps);
         }
 
-        return React__default.createElement(Day, dayProps);
+        return /*#__PURE__*/React__default.createElement(Day, dayProps);
       }
 
       return null;
@@ -2104,7 +2080,7 @@ function (_React$Component) {
         return this.props.renderBubble(bubbleProps);
       }
 
-      return React__default.createElement(Bubble, bubbleProps);
+      return /*#__PURE__*/React__default.createElement(Bubble, bubbleProps);
     }
   }, {
     key: "renderSystemMessage",
@@ -2115,7 +2091,7 @@ function (_React$Component) {
         return this.props.renderSystemMessage(systemMessageProps);
       }
 
-      return React__default.createElement(SystemMessage, systemMessageProps);
+      return /*#__PURE__*/React__default.createElement(SystemMessage, systemMessageProps);
     }
   }, {
     key: "renderAvatar",
@@ -2131,13 +2107,13 @@ function (_React$Component) {
         return null;
       }
 
-      return React__default.createElement(Avatar, avatarProps);
+      return /*#__PURE__*/React__default.createElement(Avatar, avatarProps);
     }
   }, {
     key: "render",
     value: function render() {
       var sameUser = isSameUser(this.props.currentMessage, this.props.nextMessage);
-      return React__default.createElement(ReactNative.View, null, this.renderDay(), this.props.currentMessage.system ? this.renderSystemMessage() : React__default.createElement(ReactNative.View, {
+      return /*#__PURE__*/React__default.createElement(ReactNative.View, null, this.renderDay(), this.props.currentMessage.system ? this.renderSystemMessage() : /*#__PURE__*/React__default.createElement(ReactNative.View, {
         style: [styles$f[this.props.position].container, {
           marginBottom: sameUser ? 2 : 10
         }, !this.props.inverted && {
@@ -2164,9 +2140,7 @@ Message.defaultProps = {
   inverted: true
 };
 
-var WebScrollView =
-/*#__PURE__*/
-function (_Component) {
+var WebScrollView = /*#__PURE__*/function (_Component) {
   _inherits(WebScrollView, _Component);
 
   function WebScrollView() {
@@ -2207,7 +2181,7 @@ function (_Component) {
         messages = data.slice().reverse();
       }
 
-      return React__default.createElement("div", {
+      return /*#__PURE__*/React__default.createElement("div", {
         style: styles$g.container
       }, ListHeaderComponent(), messages.map(this.renderItem), ListFooterComponent());
     }
@@ -2235,9 +2209,7 @@ WebScrollView.defaultProps = {
   inverted: false
 };
 
-var MessageContainer =
-/*#__PURE__*/
-function (_React$PureComponent) {
+var MessageContainer = /*#__PURE__*/function (_React$PureComponent) {
   _inherits(MessageContainer, _React$PureComponent);
 
   function MessageContainer() {
@@ -2275,7 +2247,7 @@ function (_React$PureComponent) {
           return _this.props.renderLoadEarlier(loadEarlierProps);
         }
 
-        return React__default.createElement(LoadEarlier, loadEarlierProps);
+        return /*#__PURE__*/React__default.createElement(LoadEarlier, loadEarlierProps);
       }
 
       return null;
@@ -2325,11 +2297,11 @@ function (_React$PureComponent) {
         return _this.props.renderMessage(messageProps);
       }
 
-      return React__default.createElement(Message, messageProps);
+      return /*#__PURE__*/React__default.createElement(Message, messageProps);
     };
 
     _this.renderHeaderWrapper = function () {
-      return React__default.createElement(ReactNative.View, {
+      return /*#__PURE__*/React__default.createElement(ReactNative.View, {
         style: styles$h.headerWrapper
       }, _this.renderLoadEarlier());
     };
@@ -2348,9 +2320,9 @@ function (_React$PureComponent) {
   }, {
     key: "renderScrollToBottomWrapper",
     value: function renderScrollToBottomWrapper() {
-      var scrollToBottomComponent = React__default.createElement(ReactNative.View, {
+      var scrollToBottomComponent = /*#__PURE__*/React__default.createElement(ReactNative.View, {
         style: styles$h.scrollToBottomStyle
-      }, React__default.createElement(TouchableOpacity, {
+      }, /*#__PURE__*/React__default.createElement(TouchableOpacity, {
         onPress: this.scrollToBottom,
         hitSlop: {
           top: 5,
@@ -2358,10 +2330,10 @@ function (_React$PureComponent) {
           right: 5,
           bottom: 5
         }
-      }, React__default.createElement(ReactNative.Text, null, "V")));
+      }, /*#__PURE__*/React__default.createElement(ReactNative.Text, null, "V")));
 
       if (this.props.scrollToBottomComponent) {
-        return React__default.createElement(TouchableOpacity, {
+        return /*#__PURE__*/React__default.createElement(TouchableOpacity, {
           onPress: this.scrollToBottom,
           hitSlop: {
             top: 5,
@@ -2378,18 +2350,18 @@ function (_React$PureComponent) {
     key: "render",
     value: function render() {
       if (this.props.messages.length === 0) {
-        return React__default.createElement(ReactNative.View, {
+        return /*#__PURE__*/React__default.createElement(ReactNative.View, {
           style: styles$h.container
         });
       }
 
-      return React__default.createElement(ReactNative.View, {
+      return /*#__PURE__*/React__default.createElement(ReactNative.View, {
         style: {
           flex: 1
         },
         onLayout: function onLayout() {// this.flatListRef.current.scrollTo({x: 0, y: 0, animated: true});
         }
-      }, this.state.showScrollBottom && this.props.scrollToBottom ? this.renderScrollToBottomWrapper() : null, React__default.createElement(WebScrollView, {
+      }, this.state.showScrollBottom && this.props.scrollToBottom ? this.renderScrollToBottomWrapper() : null, /*#__PURE__*/React__default.createElement(WebScrollView, {
         ref: this.flatListRef,
         keyExtractor: this.keyExtractor,
         extraData: this.props.extraData,
@@ -2470,9 +2442,7 @@ MessageContainer.defaultProps = {
   scrollToBottomOffset: 200
 };
 
-var GiftedChat =
-/*#__PURE__*/
-function (_React$Component) {
+var GiftedChat = /*#__PURE__*/function (_React$Component) {
   _inherits(GiftedChat, _React$Component);
 
   function GiftedChat(props) {
@@ -2648,12 +2618,13 @@ function (_React$Component) {
     value: function renderMessages() {
       var _this2 = this;
 
-      return React__default.createElement("div", {
+      return /*#__PURE__*/React__default.createElement("div", {
         style: {
           height: "calc(100% - ".concat(this.state.composerHeight, "px)"),
-          display: 'flex'
+          display: 'flex',
+          flexDirection: 'column'
         }
-      }, React__default.createElement(MessageContainer, Object.assign({}, this.props, {
+      }, /*#__PURE__*/React__default.createElement(MessageContainer, Object.assign({}, this.props, {
         invertibleScrollViewProps: this.invertibleScrollViewProps,
         messages: this.getMessages(),
         ref: function ref(component) {
@@ -2677,7 +2648,7 @@ function (_React$Component) {
         return _objectSpread({}, message, {
           user: _this3.props.user,
           createdAt: new Date(),
-          id: _this3.props.messageIdGenerator()
+          _id: _this3.props.messageIdGenerator()
         });
       });
 
@@ -2785,7 +2756,7 @@ function (_React$Component) {
         return this.props.renderInputToolbar(inputToolbarProps);
       }
 
-      return React__default.createElement(InputToolbar, inputToolbarProps);
+      return /*#__PURE__*/React__default.createElement(InputToolbar, inputToolbarProps);
     }
   }, {
     key: "renderChatFooter",
@@ -2811,13 +2782,13 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       if (this.state.isInitialized === true) {
-        return React__default.createElement(ReactNative.View, {
+        return /*#__PURE__*/React__default.createElement(ReactNative.View, {
           style: styles$i.container,
           onLayout: this.onMainViewLayout
         }, this.renderMessages(), this.renderInputToolbar());
       }
 
-      return React__default.createElement(ReactNative.View, {
+      return /*#__PURE__*/React__default.createElement(ReactNative.View, {
         style: styles$i.container,
         onLayout: this.onInitialLayoutViewLayout
       }, this.renderLoading());
